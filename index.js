@@ -1,6 +1,9 @@
 /* A line is added */
 /* manu*/
-const comments=1;
+const comments=1
+
+const logic='manu
+
 const a = 1
 /* eslint-disable no-unused-vars */
 
