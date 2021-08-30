@@ -1,6 +1,16 @@
+/*<<<<<<< main
 //  I added a comment
 // find ,me
 
+=======
+/* A line is added */
+/* manu*/
+const comments=1
+
+const logic='manu
+
+const a = 1
+//>>>>>>> main
 /* eslint-disable no-unused-vars */
 
 const Discord = require("discord.js");
