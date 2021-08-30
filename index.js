@@ -1,16 +1,4 @@
-/*<<<<<<< main
-//  I added a comment
-// find ,me
 
-=======
-/* A line is added */
-/* manu*/
-const comments=1
-
-const logic='manu
-
-const a = 1
-//>>>>>>> main
 /* eslint-disable no-unused-vars */
 
 const Discord = require("discord.js");
@@ -29,10 +17,23 @@ client.on("ready", () => {
 
 client.on("messageCreate", (msg) => {
   // console.log(msg.content);
-  if (msg.content == "hello") {
-    msg.reply("hola");
-  } else if (msg.content.includes("kingu")) {
-    msg.reply("bonguuu");
+  if (msg.content){
+    var axios = require('axios');
+
+    var config = {
+      method: 'get',
+      url: 'https://api.twitter.com/2/tweets/1275828087666679809?tweet.fields=attachments,author_id,created_at,entities,geo,id,in_reply_to_user_id,lang,possibly_sensitive,referenced_tweets,source,text,withheld',
+      headers: { }
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(JSON.stringify(response.data));
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+    
   }
 });
 
